@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+}
+
+:root {
+  --blue: #00f0ff;
+  --yellow: #f8ef00;
+  --black: #000000;
+  --font: "Tomorrow", sans-serif;
+  --margin: 2rem;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.password-box {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  padding-left: 10%;
+  padding-top: 5%;
+}
+
+.heading h1 {
+  width: 100%;
+  font-family: var(--font);
+  color: var(--yellow);
+  margin-bottom: var(--margin);
+}
+
+.input {
+  width: 100%;
+  height: 10%;
+  position: relative;
+  margin-bottom: var(--margin);
+}
+
+.input input {
+  width: 75%;
+  height: 100%;
+  padding-left: 0.5rem;
+  border: 1px solid var(--blue);
+  background-color: hsla(184, 100%, 50%, 0.256);
+  color: var(--blue);
+  font-size: 1rem;
+  font-family: var(--font);
+}
+
+input:focus {
+  outline: none;
+}
+
+#sync {
+  position: absolute;
+  right: 30%;
+  top: 18%;
+  cursor: pointer;
+}
+
+.button-lft {
+  width: 100%;
+  height: 12%;
+  margin-bottom: var(--margin);
+}
+
+.button-lft button {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+  color: var(--black);
+  font-family: var(--font);
+  font-weight: bold;
+  background-color: var(--yellow);
+  border: none;
+  border-bottom-left-radius: 20px;
+}
+
+@media (max-width: 480px) {
+  .left {
+    width: 100%;
+    height: 100%;
+  }
+  .password-box {
+    width: 90%;
+    height: 80%;
+  }
+
+  .input input {
+    width: 100%;
+    height: 100%;
+  }
+
+  #sync {
+    position: absolute;
+    right: 10%;
+    top: 20%;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .heading h1 {
+    font-size: 3rem;
+  }
+
+  .left {
+    width: 100%;
+    height: 100%;
+  }
+  .password-box {
+    width: 100%;
+    height: 80%;
+  }
+  #sync {
+    position: absolute;
+    right: 30%;
+    top: 20%;
+    cursor: pointer;
+    width: 50px;
+  }
+
+  .input input {
+    font-size: 2rem;
+    font-family: var(--font);
+  }
+
+  .button-lft button {
+    font-size: 2rem;
+  }
+}
